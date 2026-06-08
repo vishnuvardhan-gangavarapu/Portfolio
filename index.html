@@ -3,303 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vishnu Vardhan | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+<!-- ================= HEADER ================= -->
 <div class="cursor"></div>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#home" class="logo">Portfolio</a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#Certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+<header>
+    <div class="container">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+   
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>         
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-image">
+            <img src="images/profile.jpg"
+                 alt="Vishnu Vardhan">
         </div>
-    </header>
+        <h1>
+            Vishnu Vardhan Gangavarapu
+        </h1>
+        <h3>
+            Frontend Developer | Web Developer 
+        </h3>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn primary-btn">
+                View My Work
+            </a>
+            <a href="#contact" class="btn secondary-btn">
+                Contact Me
+            </a>
+            <a href="Resume.pdf"
+               download
+               class="btn primary-btn">
+                Download Resume
+            </a>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/vishnuvardhan-gangavarapu" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-flex">
+<!-- ================= ABOUT ================= -->
+<section id="about" class="about">
+    <div class="section-title">
+        <h2>About Me</h2>
+    </div>
+    <div class="about-card">
+        <div class="about-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="about-text">
+            <p>
+                I'm <strong>Vishnu Vardhan</strong>,
+                a passionate Frontend Developer
+                with strong skills in
+                HTML, CSS, JavaScript, React, Python,
+                Java, SQL and Front End Development.
+            </p>
+            <button
+            class="about-btn"
+            onclick="openAboutModal()">
+                See More About Me
+            </button>
+        </div>
+    </div>
+</section>
 
-            <!-- LEFT -->
-            <div class="hero-content">
-                <h3>Hello, It's Me</h3>
-                <h1>Vishnu Vardhan</h1>
-                <h2><span class="typing-text"></span></h2>
-                <p>
-                    I create responsive and user-friendly websites with modern technologies.
-                    Passionate about clean code and intuitive user experiences.
-                </p>
-                <!-- Social Icons (Hero Section) -->
-                <div class="hero-social">
-                    <a href="https://github.com/vishnuvardhan-2004" target="_blank">
-                    <i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/vishnu-vardhan-gangavarapu/" target="_blank">
-                    <i class="fab fa-linkedin"></i></a>
-                </div>
-                <!-- MOVE BUTTONS INSIDE -->
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn glow-btn">Get In Touch</a>
-                    <a href="#projects" class="btn glow-btn">View Projects</a>
-                    <a href="Resume.pdf" target="_blank" class="btn glow-btn">Resume</a>
-                </div>
-            </div>
+<!-- ================= ABOUT MODAL ================= -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span
+        class="close-btn"
+        onclick="closeAboutModal()">
+            &times;
+        </span>
+        <h2>
+            More About Me
+        </h2>
+        <div class="modal-section">
+            <h3>My Journey</h3>
+            <p>
+                Started my journey in Computer Science
+                and developed a passion for building
+                web applications and solving problems.
+            </p>
+        </div>
+        <div class="modal-section">
+            <h3>Goals</h3>
+            <p>
+                To become a skilled FrontEnd Developer
+                and contribute to innovative Web Applications.
+            </p>
+        </div>
+        <div class="modal-section">
+            <h3>Achievements</h3>
+            <ul>
+                <li>Built React projects</li>
+                <li>Completed internships successfully</li>
+                <li>Created responsive web applications</li>
+            </ul>
+        </div>
+        <div class="modal-section">
+            <h3>Interests</h3>
+            <p>
+                Frontend Development,
+                UI/UX Design,
+                Open Source Contributions
+            </p>
+        </div>
+        <a href="Resume.pdf"
+           download
+           class="modal-resume-btn">
+            Download Resume
+        </a>
+    </div>
+</div>
 
-            <!-- RIGHT -->
-            <div class="hero-image">
-                <img src="images/profile.jpg" alt="Vishnu">
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="skills">
+    <div class="skills-heading">
+        <h2>Skills</h2>
+    </div>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>Languages</h3>
+            <div class="skill-items">
+                <div><i class="fab fa-java"></i> Java</div>
+                <div><i class="fab fa-html5"></i> HTML</div>
+                <div><i class="fab fa-css3-alt"></i> CSS</div>
+                <div><i class="fab fa-js"></i> JavaScript</div>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>Get to know more about my background and experience</p>
-            </div>
-            <div class="about-content">
-                <p>I'm a Frontend Developer with a Bachelor's degree in Computer Science & Engineering(Artificial Intelligence). I'm passionate about creating responsive, user-friendly websites with modern technologies. I enjoy solving complex problems and learning new frameworks to enhance my development skills.</p>
+        <div class="skill-card">
+            <h3>Frameworks</h3>
+            <div class="skill-items">
+                <div><i class="fab fa-react"></i> React</div>
+                <!-- <div><i class="fas fa-leaf"></i> Spring Boot</div>
+                <div><i class="fab fa-bootstrap"></i> Bootstrap</div> -->
             </div>
         </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Skills</h2>
-                <p>Technologies I work with</p>
+        <!-- <div class="skill-card">
+            <h3>Core Concepts</h3>
+
+            <div class="skill-items">
+                <div>OOPS</div>
+                <div>DBMS</div>
+                <div>DSA</div>
+                <div>OS</div>
+                <div>CN</div>
             </div>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <i class="fab fa-html5"></i>
-                    <p>HTML</p>
-                </div>
+        </div> -->
+        <div class="skill-card">
+            <h3>Tools</h3>
+            <div class="skill-items">
+                <div><i class="fab fa-github"></i> GitHub</div>
+                <div><i class="fas fa-code"></i> VS Code</div>
+                <div><i class="fas fa-laptop-code"></i> Eclipse</div>
+                <div><i class="fas fa-database"></i> MySQL</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="skills-category">
-                    <i class="fab fa-css3-alt"></i>
-                    <p>CSS</p>
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="education">
+    <div class="container">
+        <div class="education-title">
+            <h2>Education</h2>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-date">Dec 2021 - Apr 2025</div>
+                <div class="timeline-content">
+                    <h3>Prakasam Engineering College</h3>
+                    <p>Bachelor of Technology in Computer Science & Engineering (Artificial Intelligence)</p>
+                    <span>CGPA: 7.51</span>
                 </div>
+            </div>
 
-                <div class="skills-category">
-                    <i class="fab fa-js"></i>
-                    <p>JavaScript</p>
+            <div class="timeline-item right">
+                <div class="timeline-date">June 2019 - March 2021</div>
+                <div class="timeline-content">
+                    <h3>Narayana Junior College</h3>
+                    <p>M.P.C</p>
+                    <p>Intermediate</p>
+                    <span>CGPA: 9.82</span>
                 </div>
+            </div>
 
-                <div class="skills-category">
-                    <i class="fab fa-java"></i>
-                    <p>Java</p>
-                </div>
-
-                <div class="skills-category">
-                    <i class="fab fa-python"></i>
-                    <p>Python</p>
-                </div>
-
-                <div class="skills-category">
-                    <i class="fab fa-react react-spin"></i>
-                    <p>React</p>
-                </div>
-
-                <div class="skills-category">
-                    <i class="fas fa-database"></i>
-                    <p>SQL</p>
-                </div>
-
-                <div class="skills-category">
-                    <i class="fab fa-github"></i>
-                    <p>GitHub</p>
-                </div>
-
-                <div class="skills-category">
-                    <i class="fas fa-code"></i>
-                    <p>VS Code</p>
-                </div>
-
-                <div class="skills-category">
-                    <i class="fas fa-laptop"></i>
-                    <p>Eclipse</p>
+            <div class="timeline-item left">
+                <div class="timeline-date">June 2018 - April 2019</div>
+                <div class="timeline-content">
+                    <h3>Sri G.V.S.Sankariah Memorial English Medium High School</h3>
+                    <p>S.S.C</p>
+                    <span>CGPA: 8.7</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Projects</h2>
-                <p>Check out some of my recent work</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/taskbuddy.png" alt="Task Buddy">
-                        <div class="project-overlay">
-                            <p class="project-desc">
-                                TaskBuddy is a modern task manager built using React. 
-                                It allows users to add, delete, and manage tasks efficiently 
-                                with a clean and responsive UI.
-                            </p>
-                            <div class="project-buttons">
-                                <a href="https://taskbuddy-webdev.vercel.app/" target="_blank" class="btn glow-btn">View Project</a>
-                                <a href="https://github.com/vishnuvardhan-2004/Taskbuddy" target="_blank" class="btn glow-btn">View Code</a>
-                            </div>
+<!-- ================= INTERNSHIPS ================= -->
+<section id="internships" class="internships">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Internships</h2>
+        </div>
+        
+        <div class="internship-timeline">
+            <div class="internship-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-box">
+                    <div class="box-header">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <div>
+                            <h3>Full Stack Java Intern</h3>
+                            <p class="company">ExcelR EdTech Pvt Ltd</p>
+                            <span class="duration">6 Weeks</span>
                         </div>
                     </div>
+                    <ul>
+                        <li>Built full stack applications</li>
+                        <li>Worked with Java & React</li>
+                    </ul>
+                    <button class="proof-btn" onclick="openCertificate('images/excelr.png')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        View Proof
+                    </button>
                 </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/mealready.png" alt="MealReady">
-                        <div class="project-overlay">
-                            <p class="project-desc">
-                                MealReady is a modern meal planning app built using React. 
-                                It allows users to create, manage, and share meal plans efficiently 
-                                with a clean and responsive UI.
-                            </p>
-                            <div class="project-buttons">
-                                <a href="https://mealready-project.onrender.com/" target="_blank" class="btn glow-btn">View Project</a>
-                                <a href="https://github.com/vishnuvardhan-2004/MealReady-Project" target="_blank" class="btn glow-btn">View Code</a>
-                            </div>
+            </div>
+
+            <div class="internship-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-box">
+                    <div class="box-header">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <div>
+                            <h3>Web Development Intern</h3>
+                            <p class="company">Brain O Vision</p>
+                            <span class="duration">3 Months</span>
                         </div>
                     </div>
+                    <ul>
+                        <li>Developed responsive websites</li>
+                        <li>Worked on HTML CSS JS</li>
+                    </ul>
+                    <button class="proof-btn" onclick="openCertificate('images/brainovision.png')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        View Proof
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <div class="section-title">
-                <h2>Education</h2>
-                <p>My academic journey</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Dec 2021 - Apr 2025</div>
-                    <div class="timeline-content">
-                        <h3>Prakasam Engineering College</h3>
-                        <p>Bachelor of Technology in Computer Science & Engineering(Artificial Intelligence)</p>
-                        <span>CGPA: 7.51</span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June 2019 - March 2021</div>
-                    <div class="timeline-content">
-                        <h3>Narayana Junior College</h3>
-                        <p>M.P.C</p>
-                        <p>Intermediate</p>
-                        <span>CGPA: 9.82</span>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June 2018 - April 2019</div>
-                    <div class="timeline-content">
-                        <h3>Sri G.V.S.Sankariah Memorial English Medium High School</h3>
-                        <p>S.S.C</p>
-                        <span>CGPA: 8.7</span>
-                    </div>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="projects">
+    <div class="project-heading">
+        <h2>Projects</h2>
+    </div>
+    <div class="project-grid">
+        <div class="project-card">
+            <img
+            src="images/taskbuddy.png"
+            alt="TaskBuddy">
+            <div class="project-content">
+                <h3>TaskBuddy</h3>
+                <div class="project-buttons">
+                    <a href="https://taskbuddy-webdev.vercel.app/" target="_blank">
+                        Live Demo
+                    </a>
+                    <a href="http://github.com/vishnuvardhan-gangavarapu/Taskbuddy" target="_blank">
+                        View Code
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="Certifications" class="Certifications">
-        <div class="container">
-            <div class="section-title">
-                <h2>Certifications</h2>
-                <p>My learning achievements</p>
-            </div>
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <img src="images/excelr.png" class="cert-logo" alt="ExcelR">
-                    <h3>Full Stack Java</h3>
-                    <p>6 Weeks Short-Term Internship</p>
-                    <span><a href="https://drive.google.com/file/d/14rhUsqsLbWHrVC_DV5n4QWeQayJ2YQCl/view" target="_blank">ExcelR</a></span>
-                </div>
-                <div class="cert-card">
-                    <img src="images/brainovision.jpg" class="cert-logo" alt="Brain O Vision">
-                    <h3>Web Development</h3>
-                    <p>HTML and CSS</p>
-                    <p>3 Months Internship</p>
-                    <span><a href="https://drive.google.com/file/d/1Kx7TSd4L0Q1i1fg6ccE0qN3xsAvuICwl/view" target="_blank">Brain O Vision</a></span>
+        <div class="project-card">
+            <img
+            src="images/mealready.png"
+            alt="MealReady">
+            <div class="project-content">
+                <h3>MealReady</h3>
+                <div class="project-buttons">
+                    <a href="https://mealready-project.onrender.com/" target="_blank">
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/vishnuvardhan-gangavarapu/MealReady-Project" target="_blank">
+                        View Code
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Me</h2>
-                <p>Get in touch for opportunities or collaborations</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
+<!-- ================= CERTIFICATES ================= -->
+<section id="certificates" class="certificates">
+    <div class="certificate-heading">
+        <h2>Certificates</h2>
+    </div>
+    <div class="certificate-grid">
+        <div class="certificate-card">
+            <img
+            src="images/kodnest.png"
+            alt="KodNest">
+            <h3>Full Stack Java Course</h3>
+            <button
+            onclick="openCertificate('images/kodnest.png')">
+                View Full Certificate
+            </button>
+        </div>
+        <!-- <div class="certificate-card">
+            <img
+            src="images/brainovision-thumb.jpg"
+            alt="Brain O Vision">
+            <h3>Web Development</h3>
+            <button
+            onclick="openCertificate('images/brainovision.jpg')">
+                View Full Certificate
+            </button>
+        </div>
+    </div> -->
+</section>
+
+<!-- ================= CERTIFICATE MODAL ================= -->
+<div id="certificateModal" class="certificate-modal">
+    <span
+    class="close-certificate"
+    onclick="closeCertificate()">
+        &times;
+    </span>
+    <img
+    id="certificateImage"
+    src=""
+    alt="Certificate">
+</div>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-heading">
+            <h2>Get In Touch</h2>
+        </div>
+        
+        <div class="contact-wrapper">
+            <div class="contact-left">
+                <h3>Contact Information</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Location</h4>
+                        <p>Bengaluru, Karnataka</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
-                        <span>vishnuvardhangangavarapu@gmail.com</span>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p>vishnuvardhangangavarapu@gmail.com</p>
                     </div>
                 </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/vishnu-vardhan</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>GitHub</h4>
+                        <p>github.com/vishnuvardhan-gangavarapu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <h3>Send a Message</h3>
                 <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn glow-btn">Send Message</button>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/vishnuvardhan-2004" target="_blank">
-                <i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/vishnu-vardhan-gangavarapu/" target="_blank">
-                <i class="fab fa-linkedin-in"></i></a>
-                <a href="https://facebook.com/" target="_blank">
-                <i class="fab fa-facebook-f"></i> </a>
-                <a href="https://instagram.com/" target="_blank">
-                <i class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; 2025 Vishnu Vardhan Gangavarapu. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <!-- <a href="#contact">Contact</a> -->
+    </div>
+    <p>
+        &copy; 2025 Vishnu Vardhan | All Rights Reserved.
+    </p>
+</footer>
+<script src="script.js"></script>
 </body>
-
 </html>
-
