@@ -1,24 +1,28 @@
 // ================= THEME TOGGLE =================
 const themeToggle = document.getElementById("themeToggle");
-const savedTheme = localStorage.getItem("theme");
-// Default Theme = Dark
-if(savedTheme === "light"){
+let savedTheme = localStorage.getItem("theme");
+if (!savedTheme) {
+    localStorage.setItem("theme", "dark");
+    savedTheme = "dark";
+}
+if (savedTheme === "light") {
     document.body.classList.remove("dark-theme");
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-}else{
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; 
+} else {
     document.body.classList.add("dark-theme");
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';  
 }
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
-    if(document.body.classList.contains("dark-theme")){
+    if (document.body.classList.contains("dark-theme")) {
         localStorage.setItem("theme", "dark");
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }else{
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';  
+    } else {
         localStorage.setItem("theme", "light");
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 });
+
 
 // ================= MOBILE MENU =================
 const hamburger =
