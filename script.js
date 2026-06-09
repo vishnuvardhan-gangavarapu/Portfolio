@@ -1,21 +1,22 @@
 // ================= THEME TOGGLE =================
 const themeToggle = document.getElementById("themeToggle");
 const savedTheme = localStorage.getItem("theme");
-if(savedTheme === "dark"){
+// Default Theme = Dark
+if(savedTheme === "light"){
+    document.body.classList.remove("dark-theme");
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+}else{
     document.body.classList.add("dark-theme");
-    themeToggle.innerHTML =
-        '<i class="fas fa-sun"></i>';
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
         localStorage.setItem("theme", "dark");
-        themeToggle.innerHTML =
-            '<i class="fas fa-sun"></i>';
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }else{
         localStorage.setItem("theme", "light");
-        themeToggle.innerHTML =
-            '<i class="fas fa-moon"></i>';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 });
 
@@ -136,3 +137,50 @@ document.addEventListener(
         e.clientY + "px";
     }
 );
+
+// ACTIVE NAV LINK
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+        const sectionTop =
+        section.offsetTop - 150;
+        if(window.scrollY >= sectionTop){
+            current = section.getAttribute("id");
+        }
+    });
+
+    navItems.forEach(link => {
+        link.classList.remove("active");
+        if(
+            link.getAttribute("href")
+            === "#" + current
+        ){
+            link.classList.add("active");
+        }
+    });
+});
+
+// ================= TITLE REVEAL =================
+const titles = document.querySelectorAll(".reveal-title");
+
+function revealTitles(){
+    titles.forEach(title => {
+        const titleTop =
+        title.getBoundingClientRect().top;
+        const screenHeight =
+        window.innerHeight;
+        if(titleTop < screenHeight - 100){
+            title.classList.add(
+                "show-title"
+            );
+        }
+    });
+}
+
+window.addEventListener(
+    "scroll",
+    revealTitles
+);
+revealTitles();
